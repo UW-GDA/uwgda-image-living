@@ -38,15 +38,3 @@ EXPOSE 8888
 
 # Start JupyterLab
 CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser", "--ServerApp.token=''"]
-
----
-# docker-compose.yml
-version: "3.9"
-services:
-  jupyterlab:
-    image: "ghcr.io/uw-gda/uwgda-image-living:latest"
-    ports:
-      - "8888:8888"
-    volumes:
-      - ${PWD}:/home/jovyan
-    user: "1000:1000"  # This matches typical Linux UID:GID for first user
