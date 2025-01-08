@@ -15,16 +15,20 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-# Create conda environment
+# Create conda environment and install jupyterlab
 RUN conda env create -f /tmp/environment.yml && \
+    conda install -n uwgda-image-living -c conda-forge jupyterlab && \
     conda clean -afy
 
-# Add jupyterlab to environment
-RUN conda install -n uwgda-image-living -c conda-forge jupyterlab && \
-    conda clean -afy
+# Make RUN commands use the new conda environment
+SHELL ["conda", "run", "-n", "uwgda-image-living", "/bin/bash", "-c"]
 
-# Add conda environment to PATH
-ENV PATH /opt/conda/envs/uw-gda-living/bin:$PATH
+# Set up conda env activation
+RUN echo "conda activate uwgda-image-living" >> ~/.bashrc
+
+# Add conda environment to PATH and set CONDA_DEFAULT_ENV
+ENV PATH /opt/conda/envs/uwgda-image-living/bin:$PATH
+ENV CONDA_DEFAULT_ENV uwgda-image-living
 
 # Set up work directory and permissions
 WORKDIR /home/jovyan
@@ -36,5 +40,6 @@ USER jovyan
 # Expose Jupyter port
 EXPOSE 8888
 
-# Start JupyterLab
+# Start JupyterLab using conda run to ensure we're in the right environment
+ENTRYPOINT ["conda", "run", "-n", "uwgda-image-living"]
 CMD ["jupyter", "lab", "--ip", "0.0.0.0", "--no-browser", "--ServerApp.token=''"]
