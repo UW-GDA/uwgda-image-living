@@ -6,3 +6,4 @@ emacs
 nano
 man
 manpages
+unzip
