@@ -9,7 +9,7 @@ The Docker image is published to: `ghcr.io/UW-GDA/uwgda-image-living`
 To use this image:
 
 ```bash
-docker pull ghcr.io/UW-GDA/uwgda-image-living:latest
+docker pull ghcr.io/uw-gda/uwgda-image-living:latest
 ```
 
 ## Modifying the Environment
