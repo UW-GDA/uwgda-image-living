@@ -1,4 +1,3 @@
-# Sample apt.txt
 git
 wget
 curl
