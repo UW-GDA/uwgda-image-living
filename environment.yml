@@ -1,4 +1,4 @@
-name: uwgda-image-living
+name: base
 channels:
   - conda-forge
 dependencies:
