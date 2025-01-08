@@ -20,7 +20,7 @@ RUN conda env create -f /tmp/environment.yml && \
     conda clean -afy
 
 # Add jupyterlab to environment
-RUN conda install -n gda -c conda-forge jupyterlab && \
+RUN conda install -n uw-gda-living -c conda-forge jupyterlab && \
     conda clean -afy
 
 # Add conda environment to PATH
