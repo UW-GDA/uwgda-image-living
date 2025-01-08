@@ -24,7 +24,7 @@ RUN conda install -n gda -c conda-forge jupyterlab && \
     conda clean -afy
 
 # Add conda environment to PATH
-ENV PATH /opt/conda/envs/gda/bin:$PATH
+ENV PATH /opt/conda/envs/uw-gda-living/bin:$PATH
 
 # Set up work directory and permissions
 WORKDIR /home/jovyan
