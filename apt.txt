@@ -1,0 +1,9 @@
+# Sample apt.txt
+git
+wget
+curl
+vim
+emacs
+nano
+man
+manpages
