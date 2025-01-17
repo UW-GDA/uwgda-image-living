@@ -6,7 +6,7 @@ This repository contains the configuration for building the GDA Docker environme
 The Docker image is published to: `ghcr.io/UW-GDA/uwgda-image-living`
 
 ## Usage
-To use this image:
+To pull this image:
 
 ```bash
 docker pull ghcr.io/uw-gda/uwgda-image-living:latest
