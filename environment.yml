@@ -59,3 +59,4 @@ dependencies:
   - xarray-spatial
   - zarr
   - easysnowdata
+  - jupyter-resource-usage
