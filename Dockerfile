@@ -1,6 +1,7 @@
 # Dockerfile
 FROM jupyter/minimal-notebook:latest
 
+ENV PROJ_LIB=/opt/conda/share/proj/
 # Install system dependencies
 COPY apt.txt /tmp/apt.txt
 USER root
