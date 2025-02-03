@@ -7,7 +7,7 @@ dependencies:
   - contextily
   - dask
   - dask-labextension
-  - datashader
+  - datashader==0.17.0
   - descartes
   - distributed
   - fiona
