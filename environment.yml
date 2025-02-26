@@ -60,4 +60,6 @@ dependencies:
   - zarr
   - easysnowdata
   - pooch
+  - pysal
+  - scikit-gstat
   - jupyter-resource-usage
