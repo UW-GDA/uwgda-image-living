@@ -62,4 +62,5 @@ dependencies:
   - pooch
   - pysal
   - scikit-gstat
+  - osmnx
   - jupyter-resource-usage
